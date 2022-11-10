@@ -2,8 +2,8 @@
 
 ### Tema 0
 
-- [ ] Nume proiect (îl puteți schimba ulterior)
-- [ ] Scurtă descriere a temei alese, ce v-ați propus să implementați
+- [ ] Magazin de pescuit
+- [ ] Crearea unui magazin cu articole de pescuit care sa aiba un inventar si angajati . 
 
 ## Tema 1
 
