@@ -43,12 +43,12 @@ endif()
 # NOTE: update executable name in .github/workflows/cmake.yml when changing name here
 add_executable(${PROJECT_NAME}
     Tema1/main.cpp
-    Tema1/angajat.cpp
-    Tema1/carlig.cpp
-    Tema1/inventar.cpp
-    Tema1/magazin.cpp
-    Tema1/mamaliga.cpp
-    Tema1/undita.cpp
+    Tema1/src/angajat.cpp
+    Tema1/src/carlig.cpp
+    Tema1/src/inventar.cpp
+    Tema1/src/magazin.cpp
+    Tema1/src/mamaliga.cpp
+    Tema1/src/undita.cpp
 )
 
 ###############################################################################
