@@ -14,21 +14,27 @@ std::ostream &operator<<(std::ostream& os, const inventar& inv)
     return os;
 }
 
-void inventar::CalculInv(std::vector<undita>& v2,std::vector<carlig>& v3, std::vector<mamaliga>& v4)
+void inventar::CalculInv()
 {
     int x = 0;
-    for(int i=0; i<3; i++)
+    std::vector<undita>v2 = this->und;
+    std::vector<carlig>v3 = this->carr;
+    std::vector<mamaliga>v4 = this->mam;
+    for(int i=0; i<v2.size(); i++)
     {
         x = x + v2[i].getStoc()*v2[i].getPret() + v3[i].getStoc()*v3[i].getPret() + v4[i].getStoc()*v4[i].getPret();
     }
     std::cout<<x<<" lei ";
 }
 
-void inventar::CreareMonturaIdeala(std::vector<undita>& v2,std::vector<carlig>& v3, std::vector<mamaliga>& v4)
+void inventar::CreareMonturaIdeala()
 {
+    std::vector<undita>v2 = this->und;
+    std::vector<carlig>v3 = this->carr;
+    std::vector<mamaliga>v4 = this->mam;
     std::cout<<"Montura ideala : " <<std::endl<<"================"<<std::endl<<std::endl;
     int maximund=0,maximcarr=0,maximmam=0,indiceund,indicecarr,indicemam;
-    for(int i=0; i<3; i++)
+    for(int i=0; i<v2.size(); i++)
     {
         if(v2[i].getPret()>maximund)
         {

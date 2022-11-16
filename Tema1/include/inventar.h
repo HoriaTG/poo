@@ -18,9 +18,9 @@ public :
 
     friend std::ostream &operator<<(std::ostream& os, const inventar& inv);
 
-    void CalculInv(std::vector<undita>& v2,std::vector<carlig>& v3, std::vector<mamaliga>& v4);
+    void CalculInv();
 
-    void CreareMonturaIdeala(std::vector<undita>& v2,std::vector<carlig>& v3, std::vector<mamaliga>& v4);
+    void CreareMonturaIdeala();
 };
 
 #endif // INVENTAR_H
