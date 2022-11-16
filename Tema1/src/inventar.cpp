@@ -33,7 +33,8 @@ void inventar::CreareMonturaIdeala()
     std::vector<carlig>v3 = this->carr;
     std::vector<mamaliga>v4 = this->mam;
     std::cout<<"Montura ideala : " <<std::endl<<"================"<<std::endl<<std::endl;
-    int maximund=0,maximcarr=0,maximmam=0,indiceund,indicecarr,indicemam;
+    int maximund,maximcarr,maximmam,indiceund,indicecarr,indicemam;
+    maximund = maximcarr = maximmam = indiceund = indicecarr = indicemam = 0;
     for(int i=0; i<(int)v2.size(); i++)
     {
         if(v2[i].getPret()>maximund)
