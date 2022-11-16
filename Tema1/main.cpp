@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    angajat ang1 = angajat("Mihai",1700,"5020808255698",8);
+    angajat ang1 = angajat("Florin",1700,"5020808255698",8);
     angajat ang2 = angajat("Horia",2000,"5020808144751",10);
   ///  angajat ang3 = ang2; // aici am apelat cc
     angajat ang3 = angajat("Vali",2500,"5632525144478",12);
@@ -21,8 +21,6 @@ int main()
     v1.push_back(ang1);
     v1.push_back(ang2);
     v1.push_back(ang3);
-
-    magazin mag1 = magazin(v1,"Kogalniceanu 14");
 
     undita und1 = undita(3,"carbon",4,50);
     undita und2 = undita(5,"fibra de sticla",6,70);
@@ -55,60 +53,64 @@ int main()
     /// Am creat vectorul cu mamaligi
 
     inventar inv = inventar(v2,v3,v4); /// Am creat inventarul cu obiecte de vanzare
+    std::vector<inventar> v5;
+    v5.push_back(inv);
 
+    magazin mag1 = magazin(v1,v5,"Kogalniceanu 14");
 
-/*
-    for(int i=1;i<4;i++)
+    for(int i=0;i<(int)v1.size();i++)
     {
-        std::cout<<"Angajatul "<<i<<" : "<<std::endl;
-        std::cout<<v1[i-1];
+        std::cout<<"Angajatul "<<i+1<<" : "<<std::endl;
+        std::cout<<v1[i];
         std::cout<<std::endl;
     }
     /// Afisez angajatii
     std::cout<<"============================"<<std::endl<<std::endl;
-*/
- ///   std::cout<<mag1; // Afisez datele magazinului
 
-/*
-    for(int i=1;i<4;i++)
+   std::cout<<mag1; // Afisez datele magazinului
+
+   std::cout<<"============================"<<std::endl<<std::endl;
+
+    for(int i=0;i<(int)v2.size();i++)
     {
-        std::cout<<"Tipul "<<i<<" de undita : "<<std::endl;
-        std::cout<<v2[i-1];
+        std::cout<<"Tipul "<<i+1<<" de undita : "<<std::endl;
+        std::cout<<v2[i];
         std::cout<<std::endl;
-    };
+    }
     std::cout<<"============================"<<std::endl<<std::endl;
     /// Afisez unditele
-*/
-   /// Aici nu e nimic
-/*
-    for(int i=1;i<4;i++)
+
+    for(int i=0;i<(int)v3.size();i++)
     {
-        std::cout<<"Tipul "<<i<<" de carlig : "<<std::endl;
-        std::cout<<v3[i-1];
+        std::cout<<"Tipul "<<i+1<<" de carlig : "<<std::endl;
+        std::cout<<v3[i];
         std::cout<<std::endl;
-    };
+    }
     std::cout<<"============================"<<std::endl<<std::endl;
     /// Afisez carligele
-*/
-    /// Aici nu e nimic
 
-/*
-    for(int i=1;i<4;i++)
+    for(int i=0;i<(int)v4.size();i++)
     {
-        std::cout<<"Tipul "<<i<<" de mamaliga : "<<std::endl;
-        std::cout<<v4[i-1];
+        std::cout<<"Tipul "<<i+1<<" de mamaliga : "<<std::endl;
+        std::cout<<v4[i];
         std::cout<<std::endl;
     };
     std::cout<<"============================"<<std::endl<<std::endl;
     /// Afisez mamaligile
-*/
-    ///   std::cout<<inv; //Afisez inventarul magazinului
 
-  ///  inv.CalculInv(v2,v3,v4);   // Functie membru care calculeaza valoarea totala a inventarului
 
-    ///   inv.CreareMonturaIdeala(v2,v3,v4);  //Functie membru care realizeaza montura ideala
+      std::cout<<inv; //Afisez inventarul magazinului
 
-  ///  mag1.CautareVanzator(mag1,10,v1);   // FUnctie membru care cauta vanzatori cu anii de experienta pe care ii vreau eu
+      std::cout<<"============================"<<std::endl<<std::endl;
+
+    inv.CalculInv();   // Functie membru care calculeaza valoarea totala a inventarului
+    std::cout<<std::endl<<std::endl<<"============================"<<std::endl<<std::endl;
+
+    inv.CreareMonturaIdeala();  //Functie membru care realizeaza montura ideala
+        std::cout<<"============================"<<std::endl<<std::endl;
+
+    mag1.CautareVanzator(mag1,10);   // FUnctie membru care cauta vanzatori cu anii de experienta pe care ii vreau eu
+        std::cout<<"============================"<<std::endl<<std::endl;
 
   return 0;
 }

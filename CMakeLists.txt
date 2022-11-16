@@ -41,7 +41,15 @@ endif()
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml when changing name here
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME}
+    Tema1/main.cpp
+    Tema1/angajat.cpp
+    Tema1/carlig.cpp
+    Tema1/inventar.cpp
+    Tema1/magazin.cpp
+    Tema1/mamaliga.cpp
+    Tema1/undita.cpp
+)
 
 ###############################################################################
 
@@ -113,6 +121,7 @@ endif()
 ###############################################################################
 
 # use SYSTEM so clang-tidy does not report warnings from these directories
+target_include_directories(${PROJECT_NAME} PRIVATE Tema1/include)
 #target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ext/<SomeHppLib>/include)
 #target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${<SomeLib>_SOURCE_DIR}/include)
 #target_link_directories(${PROJECT_NAME} PRIVATE ${<SomeLib>_BINARY_DIR}/lib)
