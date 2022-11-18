@@ -57,8 +57,10 @@ int main()
     v5.push_back(inv);
 
     magazin mag1 = magazin(v1,v5,"Kogalniceanu 14");
+    std::vector<magazin> v6;
+    v6.push_back(mag1);
 
-    for(int i=0;i<(int)v1.size();i++)
+    for(auto i=0ull;i<v1.size();i++)
     {
         std::cout<<"Angajatul "<<i+1<<" : "<<std::endl;
         std::cout<<v1[i];
@@ -71,7 +73,7 @@ int main()
 
    std::cout<<"============================"<<std::endl<<std::endl;
 
-    for(int i=0;i<(int)v2.size();i++)
+    for(auto i=0ull;i<v2.size();i++)
     {
         std::cout<<"Tipul "<<i+1<<" de undita : "<<std::endl;
         std::cout<<v2[i];
@@ -80,7 +82,7 @@ int main()
     std::cout<<"============================"<<std::endl<<std::endl;
     /// Afisez unditele
 
-    for(int i=0;i<(int)v3.size();i++)
+    for(auto i=0ull;i<v3.size();i++)
     {
         std::cout<<"Tipul "<<i+1<<" de carlig : "<<std::endl;
         std::cout<<v3[i];
@@ -89,7 +91,7 @@ int main()
     std::cout<<"============================"<<std::endl<<std::endl;
     /// Afisez carligele
 
-    for(int i=0;i<(int)v4.size();i++)
+    for(auto i=0ull;i<v4.size();i++)
     {
         std::cout<<"Tipul "<<i+1<<" de mamaliga : "<<std::endl;
         std::cout<<v4[i];

@@ -20,7 +20,7 @@ void inventar::CalculInv()
     std::vector<undita>v2 = this->und;
     std::vector<carlig>v3 = this->carr;
     std::vector<mamaliga>v4 = this->mam;
-    for(int i=0; i<(int)v2.size(); i++)
+    for(auto i=0ull; i<v2.size(); i++)
     {
         x = x + v2[i].getStoc()*v2[i].getPret() + v3[i].getStoc()*v3[i].getPret() + v4[i].getStoc()*v4[i].getPret();
     }
@@ -33,9 +33,8 @@ void inventar::CreareMonturaIdeala()
     std::vector<carlig>v3 = this->carr;
     std::vector<mamaliga>v4 = this->mam;
     std::cout<<"Montura ideala : " <<std::endl<<"================"<<std::endl<<std::endl;
-    int maximund,maximcarr,maximmam,indiceund,indicecarr,indicemam;
-    maximund = maximcarr = maximmam = indiceund = indicecarr = indicemam = 0;
-    for(int i=0; i<(int)v2.size(); i++)
+    int maximund=0,maximcarr=0,maximmam=0,indiceund=0,indicecarr=0,indicemam=0;
+    for(auto i=0ull; i<v2.size(); i++)
     {
         if(v2[i].getPret()>maximund)
         {
